@@ -1,6 +1,14 @@
-import React from 'react'
+import React,{useState} from 'react'
 
 export default function Formulario() {
+    const [nombre,setNombre]=useState("")
+    const [nombreP,setNombreP]=useState("Adrian")
+    const [correo,setCorreo]=useState("ejemplo@gmail.com")
+    const [fecha,setFecha]=useState("11/7/22")
+    const [sintomas,setSintomas]=useState("")
+    
+    
+
     return (
         <div className='w-1/2'>
             <h1 className='font-black text-3xl text-center'>Administracion Pacientes</h1>
@@ -15,6 +23,7 @@ export default function Formulario() {
                         Nombre de la Mascota
                     </label>
                     <input
+                        onChange={(event)=>{setNombre(event.target.value)}}
                         id="mascota"
                         type="text"
                         className='border-2 w-full p-2 mt-2 place-gray-400 rounded-md'>
@@ -27,6 +36,7 @@ export default function Formulario() {
                         Nombre del propietario
                     </label>
                     <input
+                        onChange={(event)=>{setNombreP(event.target.value)}}
                         id="propietario"
                         type="text"
                         className='border-2 w-full p-2 mt-2 place-gray-400 rounded-md'>
@@ -39,6 +49,7 @@ export default function Formulario() {
                         Email
                     </label>
                     <input
+                        onChange={(event)=>{setCorreo(event.target.value)}}
                         id="email"
                         type="email"
                         className='border-2 w-full p-2 mt-2 place-gray-400 rounded-md'>
@@ -51,6 +62,7 @@ export default function Formulario() {
                         Fecha de Alta
                     </label>
                     <input
+                        onChange={(event)=>{setFecha(event.target.value)}}
                         id="alta"
                         type="date"
                         className='border-2 w-full p-2 mt-2 place-gray-400 rounded-md'>
@@ -63,14 +75,16 @@ export default function Formulario() {
                         Sintomas
                     </label>
                     <textarea
+                    onChange={(event)=>{setSintomas(event.target.value)}}
                         id="sintomas"
                         placeholder='Describe los sintomas'
                         className='border-2 w-full p-2 mt-2 place-gray-400 rounded-md'>
                     </textarea>
                 </div>
-                <button className='w-full bg-indigo-600 p-3 
+                <button type="button" className='w-full bg-indigo-600 p-3 
                 text-white uppercase font-bold
-                 hover:bg-indigo-800'>
+                 hover:bg-indigo-800'
+                 >
                     Agregar Paciente
                 </button>
             </form>

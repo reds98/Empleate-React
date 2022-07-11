@@ -3,12 +3,15 @@ import './App.css';
 import Header from './Header';
 import Formulario from './Formulario';
 import ListadoPacientes from './ListadoPacientes';
+import { useState } from 'react';
 function App() {
+ 
   return (
     <div className='container mx-auto mt-20'>
       <Header />
       <div className='mt-12 flex'>
-        <Formulario />
+        <Formulario
+         />
         <ListadoPacientes />
       </div>
 

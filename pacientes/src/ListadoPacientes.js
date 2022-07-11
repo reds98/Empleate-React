@@ -9,9 +9,7 @@ export default function ListadoPacientes() {
                 <span className='font-bold text-indigo-600'> Pacientes y Citas</span>
             </p>
             <TarjetaPaciente/>
-            <TarjetaPaciente/>
-            <TarjetaPaciente/>
-            <TarjetaPaciente/>
+            
         </div>
 
     )
