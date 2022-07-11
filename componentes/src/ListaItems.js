@@ -1,6 +1,12 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 
 function ListaItems() {
+    useEffect(()=>{
+        alert("Hola desde el inicio")
+    },[])
+
+
+
     let nombres = ["Papaya", "Sandia", "Manzana", "Fresa"]
     const [numerosRandom,setNumerosRandom]=useState([1,3])
 
