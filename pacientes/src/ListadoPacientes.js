@@ -1,6 +1,6 @@
 import React from 'react'
 import TarjetaPaciente from './TarjetaPaciente'
-export default function ListadoPacientes() {
+export default function ListadoPacientes({pacientes}) {
     return (
         <div className='w-1/2'>
             <h1  className='font-black text-center text-3xl'>ListadoPacientes</h1>

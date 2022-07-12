@@ -1,12 +1,22 @@
 import React,{useState} from 'react'
 
-export default function Formulario() {
+export default function Formulario({pacientes,setPacientes}) {
     const [nombre,setNombre]=useState("")
     const [nombreP,setNombreP]=useState("Adrian")
     const [correo,setCorreo]=useState("ejemplo@gmail.com")
     const [fecha,setFecha]=useState("11/7/22")
     const [sintomas,setSintomas]=useState("")
     
+    function agregarPaciente(){   
+        const  paciente={
+            nombre,
+            nombreP,
+            correo,
+            fecha,
+            sintomas
+        }     
+        setPacientes([...pacientes,paciente])
+    }
     
 
     return (
@@ -23,6 +33,7 @@ export default function Formulario() {
                         Nombre de la Mascota
                     </label>
                     <input
+                        
                         onChange={(event)=>{setNombre(event.target.value)}}
                         id="mascota"
                         type="text"
@@ -81,7 +92,7 @@ export default function Formulario() {
                         className='border-2 w-full p-2 mt-2 place-gray-400 rounded-md'>
                     </textarea>
                 </div>
-                <button type="button" className='w-full bg-indigo-600 p-3 
+                <button onClick={agregarPaciente} type="button" className='w-full bg-indigo-600 p-3 
                 text-white uppercase font-bold
                  hover:bg-indigo-800'
                  >
